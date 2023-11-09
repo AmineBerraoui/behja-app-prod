@@ -10,7 +10,7 @@ const HeroSection = () => {
   console.log(activeLanguage);
   const navigate = useNavigate();
   return (
-    <section className='mt-[150px] w-[90%] md:w-[75%] mb-10' id='herosection'>
+    <section className='mt-[200px] w-[90%]  h-full md:w-[75%]' id='herosection'>
       <div
         className={`flex ${
           i18n.language === 'Ar' ? 'flex-row-reverse' : 'flex-row'
@@ -20,7 +20,7 @@ const HeroSection = () => {
           <div
             className={`flex flex-col ${
               i18n.language === 'Ar' ? 'items-end' : 'items-start'
-            } gap-4`}
+            } gap-16`}
           >
             <h1
               className={`heading-02-bold text-primary-900 ${
@@ -40,7 +40,7 @@ const HeroSection = () => {
               )}
             </p>
           </div>
-          <div className='mt-6'>
+          <div className='mt-12'>
             {/* <p
               className={`paragraph-01 ${
                 i18n.language === 'Ar' ? 'text-end' : 'text-start'
@@ -57,7 +57,7 @@ const HeroSection = () => {
                 to='https://try.behja.co/20214301-e1aa-4212-b267-8c0abcd6f97d'
                 className='paragraph-01 bg-primary-600 text-shades-white px-8 py-3 rounded'
               >
-                {t('sign up to the waitlist')}
+                {t('Join the waitlist')}
               </Link>
               {/* <button
                 className='paragraph-01 bg-primary-300 px-8 py-3 rounded'
@@ -92,28 +92,28 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div
+      {/* <div
         className={`flex items-center ${
           i18n.language === 'Ar' ? 'flex-row-reverse' : 'flex-row'
         } mt-7 gap-2`}
       >
-        {/* <img src='./assets/youtube.svg' alt='youtube-logo' />
+        <img src='./assets/youtube.svg' alt='youtube-logo' />
         <p className='paragraph-01-underline text-neutral-700'>
           {t('Watch How it Works')}
-        </p> */}
-      </div>
+        </p>
+      </div> */}
       <div
         className={`flex ${
           i18n.language === 'Ar' ? 'flex-row-reverse' : 'flex-row'
-        } items-center justify-center gap-4 my-4`}
+        } items-center justify-center gap-4 mt-24`}
       >
-        <p className='subparagraph-regular text-neutral-500'>
+        {/* <p className='subparagraph-regular text-neutral-500'>
           {t('License number 120022677')}
-        </p>
+        </p> */}
         <img
           src='./assets/realestatelogo.svg'
           alt='real estate authority logo'
-          className=''
+          className='w-80'
         />
       </div>
       {/* <StaticsSection /> */}

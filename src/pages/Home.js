@@ -11,7 +11,7 @@ import NotJustaServiceSection from "../containers/NotJustaServiceSection";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto bg-primary-50">
+    <div className="flex flex-col items-center justify-center gap-20 mx-auto bg-primary-50">
     <NavBar fixed={true}/>
     <HeroSection />
     {/* <DiscoverSection /> */}

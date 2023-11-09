@@ -15,7 +15,7 @@ const NotJustaServiceSection = () => {
   };
 
   return (
-    <section className="w-[75%] mt-20">
+    <section className="w-[75%] h-full">
 
       <div className="hidden lg:flex lg:flex-row lg:gap-10">
         <div className=" bg-gradient-to-b from-primary-400 to-primary-50 w-[30%] h-[526px] flex flex-col justify-end rounded-t-[20px]">
@@ -76,37 +76,37 @@ const NotJustaServiceSection = () => {
         <Slider {...settings}>
           <div className="relative w-full h-[300px] ">
             <img
-              src="./assets/woman-1.png"
+              src="./assets/equal/woman-1.png"
               alt="behja person"
-              className="absolute left-0 right-0 bottom-[-10px] m-auto "
+              className="absolute left-0 right-0 bottom-[-10px] m-auto h-full"
             />
           </div>
           <div className="relative w-full h-[300px] ">
             <img
-              src="./assets/homme-1.png"
+              src="./assets/equal/homme-1.png"
               alt="behja person"
-              className="absolute left-0 right-0 bottom-[-10px] m-auto   "
+              className="absolute left-0 right-0 bottom-[-10px] m-auto h-full  "
             />
           </div>
           <div className="relative w-full h-[300px] ">
             <img
-              src="./assets/woman-2.png"
+              src="./assets/equal/woman-2.png"
               alt="behja person"
-              className="absolute left-0 right-0 bottom-[-10px] m-auto   "
+              className="absolute left-0 right-0 bottom-[-10px] m-auto h-full  "
             />
           </div>
           <div className="relative w-full h-[300px] ">
             <img
-              src="./assets/homme-2.png"
+              src="./assets/equal/homme-2.png"
               alt="behja person"
-              className="absolute left-0 right-0 bottom-[-10px] m-auto   "
+              className="absolute left-0 right-0 bottom-[-10px] m-auto h-full  "
             />
           </div>
           <div className="relative w-full h-[300px] ">
             <img
-              src="./assets/woman-3.png"
+              src="./assets/equal/woman-3.png"
               alt="behja person"
-              className="absolute left-0 right-0 bottom-[-10px] m-auto   "
+              className="absolute left-0 right-0 bottom-[-10px] m-auto h-full  "
             />
           </div>
         </Slider>

@@ -4,8 +4,9 @@ import i18n from "../i18n";
 import { PiLockSimple } from "react-icons/pi";
 import { PiGlobe } from "react-icons/pi";
 import { PiCaretDown } from "react-icons/pi";
-import { RiMenu3Fill } from "react-icons/ri";
+import { RiMenu3Fill, RiMenu2Fill } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
+import "./navbar.css"
 
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -60,43 +61,46 @@ const NavBar = ({fixed}) => {
       <div className={`flex ${activeLanguage === "Ar" ? "flex-row-reverse" : "flex-row"} items-center justify-between py-[32px]  w-[90%] lg:w-[75%]`}>
       <img
         src="./assets/Logo.png"
-        className="w-[82px] h-[27px]"
+        className="w-[120px] h-[40px]"
         alt="behja logo"
         onClick={() => navigate("/")}
       />
 
       <button
-        className="xl:hidden"
+        className={`flex ${i18n.language === "Ar" ? "flex-row-reverse" : "flex-row"} items-center justify-between gap-2 xl:hidden`}
         onClick={toggleMobileMenu}
         ref={menuButtonRef}
       >
-        <RiMenu3Fill />
+        <p className="paragraph-03-regular text-shades-black">{t('Menu')}</p>
+        {i18n.language === "Ar" ? <RiMenu2Fill className="w-8 h-8" /> : <RiMenu3Fill  className="w-8 h-8"/>}
+        
       </button>
 
       {isMobileMenuOpen ? (
         <div
-          className="fixed flex flex-col items-center justify-between py-5 top-0 right-0 w-[50%] h-full bg-neutral-100 z-40 transition-right duration-300 ease-in-out "
+          className="fixed flex flex-col items-center justify-between py-5 top-0 right-0 w-[50%] h-full nav-blurred-div z-40 transition-right duration-300 ease-in-out "
           ref={mobileMenuRef}
         >
           <button className="self-end px-10" onClick={toggleMobileMenu}>
             <GrClose />
           </button>
-          <div className="flex flex-col items-center gap-10 w-full">
+          <div className="flex flex-col items-center justify-center gap-10 w-full">
             {/* <p className="paragraph-01 text-primary-800 w-full py-3 md:text-2xl md:font-semibold">
               <a href="#homefinder">{t("Home Finder")}</a>
             </p> */}
-            <p className="paragraph-01 text-primary-800 w-full py-3 md:text-2xl md:font-semibold">
+            <p className="paragraph-01 text-primary-800 w-full text-center py-3 md:text-2xl md:font-semibold">
               <a href="#howitworks">{t("How it works")}</a>
             </p>
-            <p className="paragraph-01 text-primary-800 w-full py-3 md:text-2xl md:font-semibold">
+            <p className="paragraph-01 text-primary-800 w-full text-center py-3 md:text-2xl md:font-semibold">
               <a href="#benefitssection">{t("For Behja tenants")}</a>
             </p>
             {/* <p className="paragraph-01 text-primary-800 w-full py-3 md:text-2xl md:font-semibold">
               <a href="#investorsection">{t("For Behja investors")}</a>
             </p> */}
           </div>
-          <button className=" flex items-center bg-primary-600 rounded py-3 px-9">
+          <button className=" flex flex-col items-center bg-primary-600 rounded py-3 px-9">
             <PiLockSimple className="text-white w-10 h-8" />
+            <p className="text-shades-white">{t('Tenants Area')}</p>
           </button>
           <div className="flex items-center justify-around w-full">
             <button onClick={() => handleLanguage("En")}>En</button>

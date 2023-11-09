@@ -6,7 +6,7 @@ import { BiBriefcaseAlt2 } from "react-icons/bi";
 const BenefitsSection = () => {
   const { t, i18n } = useTranslation();
   return (
-    <section className={`flex flex-col items-center justify-center bg-gradient-to-r from-primary-600 to-primary-700 w-full mt-16`} id="benefitssection">
+    <section className={`flex flex-col items-center justify-center bg-gradient-to-r from-primary-600 to-primary-700 w-full h-full mt-16`} id="benefitssection">
       <div className={`w-[90%] ${i18n.language === "Ar" ? "items-end" : "items-start"} py-28 `}>
         <p className={`paragraph-01-regular text-primary-50 ${i18n.language === "Ar" ? "text-end" : "text-start"}  mb-4`}>
           {t("The Benefits of Behja")}

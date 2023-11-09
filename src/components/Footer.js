@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={`flex flex-col items-center justify-center lg:${i18n.language === "Ar" ? "items-end" : "items-start"}`}>
           <img src="./assets/Behja.svg" alt="Behja" />
           <p
-            className={`heading-04-bold text-shades-white mt-8 lg:${i18n.language === "Ar" ? "items-end" : "items-center"}`}
+            className={`heading-04-bold text-center text-shades-white mt-8 lg:${i18n.language === "Ar" ? "items-end" : "items-center"}`}
             style={{ whiteSpace: "pre-line" }}
           >
             {t("Become a home owner\nin 3 years or less")}

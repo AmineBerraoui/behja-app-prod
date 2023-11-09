@@ -5,7 +5,7 @@ import Accordion from '../components/Accordion';
 
 const faqs = [
   {
-    title: 'Timing - when is the launch?',
+    title: 'When will the service be available?',
     number: '01',
     contents: [
       'Q1 (jan) is the expected launch date of the service, but we will\npre-qualify you by the end of the year',

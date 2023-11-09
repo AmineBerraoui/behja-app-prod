@@ -7,23 +7,23 @@ const HowItWorksSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className=' w-[90%] lg:w-[75%]'>
+    <section className=' w-[90%] h-full  lg:w-[75%]'>
       <div className='flex flex-col justify-center items-center'>
         <p className='heading-01-semibold text-primary-900'>
           {t('How it Works')}
         </p>
-        <p className='paragraph-02-regular text-primary-700 mt-1'>
+        <p className='paragraph-02-regular text-center text-primary-700 mt-1'>
           {t('Home ownership with Behja is a simple four step process')}
         </p>
       </div>
 
       <div
-        className={`flex flex-col-reverse  lg:flex lg:${
+        className={`flex flex-col-reverse lg:flex lg:${
           i18n.language === 'Ar' ? 'flex-row-reverse text-end' : 'flex-row'
         } lg:justify-between lg:items-center`}
         id='howitworks'
       >
-        <div className='mt-20 w-full flex flex-col items-center justify-center'>
+        <div className={`mt-20 w-full flex flex-col justify-center items-center ${i18n.language === "Ar" ? "lg:items-end" : "lg:items-start"} `}>
           <div
             className={`flex flex-col gap-5 justify-center ${
               i18n.language === 'Ar' ? 'items-end' : 'items-start'
@@ -34,7 +34,7 @@ const HowItWorksSection = () => {
                 i18n.language === 'Ar' ? 'flex-row-reverse' : 'flex-row'
               } gap-5`}
             >
-              <p className='heading-02-semibold text-primary-900'>1.</p>
+              <p className='heading-02-semibold text-primary-900'>{i18n.language === "Ar" ? ".1" : "1."}</p>
               <div>
                 <p className='heading-02-semibold text-primary-900'>
                   {t('Choose a property')}
@@ -52,7 +52,7 @@ const HowItWorksSection = () => {
                 i18n.language === 'Ar' ? 'flex-row-reverse' : 'flex-row'
               } gap-5`}
             >
-              <p className='heading-02-semibold text-primary-900'>2.</p>
+              <p className='heading-02-semibold text-primary-900'>{i18n.language === "Ar" ? ".2" : "2."}</p>
               <div>
                 <p className='heading-02-semibold text-primary-900'>
                   {t('Apply & get approved')}
@@ -72,7 +72,7 @@ const HowItWorksSection = () => {
                 i18n.language === 'Ar' ? 'flex-row-reverse' : 'flex-row'
               } gap-5`}
             >
-              <p className='heading-02-semibold text-primary-900'>3.</p>
+              <p className='heading-02-semibold text-primary-900'>{i18n.language === "Ar" ? ".3" : "3."}</p>
               <div>
                 <p className='heading-02-semibold text-primary-900'>
                   {t('Move in & build savings')}
@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
                 i18n.language === 'Ar' ? 'flex-row-reverse' : 'flex-row'
               } gap-5`}
             >
-              <p className='heading-02-semibold text-primary-900'>4.</p>
+              <p className='heading-02-semibold text-primary-900'>{i18n.language === "Ar" ? ".4" : "4."}</p>
               <div>
                 <p className='heading-02-semibold text-primary-900'>
                   {t('Own your apartment')}
